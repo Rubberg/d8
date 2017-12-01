@@ -1,0 +1,20 @@
+# ==============================================================================
+# List of default adimeo components, which they will be installed
+# when we install adimeo.
+# ==============================================================================
+config_bit:
+  type: list
+  for: adimeo.info.yml
+  when:
+    install_default_components: true
+    list:
+      dependencies:
+        # Enable listed modules in order at this installation step. 
+        - libraries
+        # Enable listed Adimeo modules in order at this installation step. 
+        - adimeo_core
+        - adimeo_admin
+        - adimeo_security
+        - adimeo_seo
+        - adimeo_media
+        - adimeo_edit

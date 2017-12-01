@@ -1,0 +1,37 @@
+# ==============================================================================
+# List of extra adimeo components, which they will be listed in the
+# Extra components form, when we install adimeo.
+# ==============================================================================
+config_bit:
+  type: list
+  for: adimeo.info.yml
+  when:
+    show_extra_components: true
+    list:
+      dependencies:
+        adimeo_search:
+          title: "Search"
+          description: "A suite of site search engine tools to help you build better search performance, customization, and search experience. Built using <a href=\"https://www.drupal.org/project/search_api\" target=\"_blank\">Search API</a>."
+          selected: false
+          config_form: false
+        adimeo_workflows:
+          title: "Workflows"
+          description: "Basic Editorial workflows"
+          selected: false
+          config_form: false
+        editorial_block:
+          title: "Editorial block"
+          description: "Editorial block"
+          selected: false
+          config_form: false
+        adimeo_paragraphes:
+          title: "Paragraphes"
+          description: "Paragraphes"
+          selected: false
+          config_form: false
+        adimeo_slick:
+          title: "Slick"
+          description: "Slick"
+          selected: false
+          config_form: false
+

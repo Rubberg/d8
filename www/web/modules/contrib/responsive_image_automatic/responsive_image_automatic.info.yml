@@ -1,0 +1,14 @@
+name: Responsive Image Automatic
+type: module
+description: 'Automatic responsive images.'
+package: Media
+
+# core: 8.x
+dependencies:
+  - image
+
+# Information added by Drupal.org packaging script on 2016-02-11
+version: '8.x-1.0-rc1'
+core: '8.x'
+project: 'responsive_image_automatic'
+datestamp: 1455152040

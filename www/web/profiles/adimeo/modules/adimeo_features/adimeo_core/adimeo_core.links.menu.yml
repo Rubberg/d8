@@ -1,0 +1,11 @@
+adimeo_core.settings_index:
+  title: 'Adimeo settings'
+  description: 'Configuring Adimeo settings.'
+  parent: system.admin_config
+  route_name: adimeo_core.settings_index
+adimeo_core.general_settings:
+  title: 'Adimeo general settings'
+  description: 'Configuring Adimeo general settings.'
+  parent: adimeo_core.settings_index
+  route_name: adimeo_core.general_settings
+  weight: -1000

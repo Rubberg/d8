@@ -1,0 +1,10 @@
+name: 'Adimeo edit'
+description: 'Linkit profiles, wysiwyg configuration & plugins'
+type: module
+core: 8.x
+dependencies:
+  - linkit
+  - node
+  - taxonomy
+version: 8.4.0
+package: Adimeo

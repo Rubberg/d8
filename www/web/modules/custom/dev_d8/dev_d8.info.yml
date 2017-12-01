@@ -1,0 +1,5 @@
+name: dev d8
+type: module
+description: Formation d8
+core: 8.x
+package: Formation

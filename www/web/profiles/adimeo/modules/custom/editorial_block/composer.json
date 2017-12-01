@@ -1,0 +1,14 @@
+{
+  "name": "drupal/editorial_block",
+  "type": "drupal-module",
+  "description": "Editorial Block entities",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/editorial_block",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/editorial_block",
+    "source": "http://cgit.drupalcode.org/editorial_block"
+  },
+  "require": { }
+}

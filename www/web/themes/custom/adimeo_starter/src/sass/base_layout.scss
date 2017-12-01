@@ -1,0 +1,125 @@
+@import 'variables';
+/**********************/
+/**** BASE / THEME ****/
+/**********************/
+body{
+  /* Base setting, for example :
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  color: #262626;
+  */
+}
+ul,li{
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  /*
+  color: #004c8d;
+  text-decoration: underline;
+  */
+}
+a:hover{
+
+}
+h1{
+  /*
+  font-weight: 700;
+  font-size: 2em;
+  */
+}
+h2{
+  /*
+  font-weight: 400;
+  font-size: 1.75em;
+  */
+}
+h3{
+  /*
+  font-weight: 700;
+  font-size: 1.5em;
+  */
+}
+img{
+  max-width: 100%;
+  height: auto;
+  display: block; /* Optionnel */
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.clear{
+  clear: both;
+}
+
+/**** WYSIWYG front styling ****/
+/* Par exemple : */
+.wysiwyg-selector p{
+  /* same as body */
+}
+.wysiwyg-selector ul li:before{
+  content: "• ";
+}
+.wysiwyg-selector ol{
+  counter-reset: section;
+}
+.wysiwyg-selector ol li:before{
+  counter-increment: section;
+  content: counter(section) " ";
+}
+.wysiwyg-selector div.encadre{
+  padding: 1.3571em;
+  border: 1px solid #DBDBDB;
+}
+
+/****************/
+/**** LAYOUT ****/
+/****************/
+.site-size-wrapper{
+  width: 100%;
+  max-width: 1350px; /* Changer la valeur en fonction de la taille max du site */
+  margin: 0 auto;
+  position: relative;
+}
+#main{
+
+}
+#content-wrapper #content{
+  float: none;
+  width: 100%;
+}
+#content-wrapper.with-sidebar-first #content,
+#content-wrapper.with-sidebar-second #content{
+  width: calc(100% - 300px);
+  float: left;
+}
+#content-wrapper.with-sidebar-first aside,
+#content-wrapper.with-sidebar-first.with-sidebar-second aside,
+#content-wrapper.with-sidebar-second aside{
+  width: 300px;
+  float: left;
+}
+#content-wrapper.with-sidebar-first.with-sidebar-second #content{
+  width: calc(100% - 600px);
+  float: left;
+}
+
+/**** HEADER ****/
+/* Preheader */
+/* Logo */
+/* Menu principal */
+/* Menu déroulant */
+
+
+/**** CONTENT ****/
+/* Breadcrumbs */
+/* Addthis */
+/* Content */
+
+/**** FOOTER ****/

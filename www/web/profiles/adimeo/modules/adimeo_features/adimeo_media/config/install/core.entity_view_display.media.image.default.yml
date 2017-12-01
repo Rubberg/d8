@@ -1,0 +1,18 @@
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_image
+    - media_entity.bundle.image
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_image: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,11 @@
+name: 'Adimeo workflows'
+description: 'Workflows configuration'
+type: module
+core: 8.x
+dependencies:
+  - content_moderation
+  - content_moderation_notifications
+  - user
+  - workflows
+version: 8.4.0
+package: Adimeo

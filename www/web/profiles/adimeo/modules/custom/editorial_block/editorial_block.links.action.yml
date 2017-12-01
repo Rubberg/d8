@@ -1,0 +1,11 @@
+entity.editorial_block_entity.add_form:
+  route_name: entity.editorial_block_entity.add_page
+  title: 'Add Editorial block'
+  appears_on:
+    - entity.editorial_block_entity.collection
+entity.editorial_block_entity_type.add_form:
+  route_name: entity.editorial_block_entity_type.add_form
+  title: 'Add Editorial block type'
+  appears_on:
+    - entity.editorial_block_entity_type.collection
+

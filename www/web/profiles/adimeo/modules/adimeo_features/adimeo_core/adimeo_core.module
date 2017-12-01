@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * @file
+ * Contains adimeo_core.module.
+ */
+
+// To have all adimeo core general and global tokens.
+module_load_include('inc', 'adimeo_core', 'adimeo_core.tokens');

@@ -1,0 +1,35 @@
+name: 'Adimeo Media'
+description: 'Manages type of media contents and entity browsers in the site.'
+type: module
+package: Adimeo
+dependencies:
+  0: adimeo_core
+  1: advanced_text_formatter
+  2: blazy
+  3: comment
+  4: content_moderation
+  6: crop
+  7: dropzonejs_eb_widget
+  8: embed
+  9: entity_browser
+  10: entity_embed
+  11: field
+  12: file
+  13: focal_point
+  14: image
+  16: media_entity
+  17: media_entity_document
+  18: media_entity_image
+  19: node
+  20: path
+  21: responsive_image
+  22: system
+  23: text
+  24: user
+  25: video_embed_field
+  26: video_embed_media
+  27: views
+  28: views_infinite_scroll
+version: 8.x-4.0
+core: 8.x
+project: adimeo

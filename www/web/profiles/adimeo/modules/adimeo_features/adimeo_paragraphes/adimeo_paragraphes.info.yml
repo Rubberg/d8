@@ -1,0 +1,10 @@
+name: 'Adimeo paragraphes'
+description: 'Paragraphes modules'
+type: module
+core: 8.x
+dependencies:
+ - paragraphs
+ - paragraphs_previewer
+ - paragraphs_type_permissions
+version: 8.4.0
+package: Adimeo

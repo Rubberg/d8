@@ -1,0 +1,15 @@
+@import 'variables';
+
+/* CLEARFIX -> to manually add clearfix effect on element without the need to add the class */
+ul:after,
+#main:after,
+.form-item:after,
+.form-actions:after,
+.clearfix:after{
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}

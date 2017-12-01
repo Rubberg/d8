@@ -1,0 +1,148 @@
+<?php
+
+/**
+ * @file
+ * Contains editorial_block.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use \Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_help().
+ */
+function editorial_block_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the editorial_block module.
+    case 'help.page.editorial_block':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Editorial Block entities') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function editorial_block_theme() {
+  $theme = [];
+  $theme['editorial_block_entity'] = [
+    'render element' => 'elements',
+    'file' => 'editorial_block_entity.page.inc',
+    'template' => 'editorial_block_entity',
+  ];
+  $theme['editorial_block_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'editorial_block_entity.page.inc',
+  ];
+  $theme['editorial_block'] = [
+      'render element' => 'children',
+    ];
+  $theme['editorial_block_container'] = [
+      'variables' => array(
+          'content' => array(),
+      ),
+      'template' => 'editorial-block-container',
+      ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function editorial_block_theme_suggestions_editorial_block_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#editorial_block_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'editorial_block_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'editorial_block_entity__' . $entity->bundle();
+  $suggestions[] = 'editorial_block_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'editorial_block_entity__' . $entity->id();
+  $suggestions[] = 'editorial_block_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}
+function editorial_block_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+    if($entity->bundle() == ('entity_image')) {
+        $color = $entity->get("field_color_trait")->getValue()[0]['value'];
+        $front_title_image = $entity->get("field_front_title")->getValue()[0]['value'];
+//        dpm($front_title_image);
+        $build['field_front_title']['0'] = array("#markup" => '<div class="field--name-field-front-title'. " ". $color.'">'.$front_title_image.'</div>');
+
+        if(\Drupal::service('path.matcher')->isFrontPage()) {
+            $uri_link = $entity->get('field_link_image')->getValue()[0]['uri'];
+            $tid = $entity->get('field_image_entity')->getValue()[0]['target_id'];
+            $image_home = Drupal::entityTypeManager()->getStorage('media')->load($tid);
+            $fid = $image_home->get('image')->getValue()[0]['target_id'];
+            $file = \Drupal::entityTypeManager()->getStorage('file')->load($fid);
+            $style = \Drupal::entityTypeManager()->getStorage('image_style')->load('image_home');
+            $url_image = $file->getFileUri();
+            $url_image_final = $style->buildUrl($url_image);
+            $name_image = $entity->get('field_front_title')->getValue()[0]['value'];
+            $build['field_image_entity']['0'] = array("#markup" => '<a href="'.$uri_link.'"><img src="'.$url_image_final.'"></a>');
+            $build['field_front_title']['0'] = array("#markup" => '<a href="'.$uri_link.'">'. $name_image . '</a>');
+        }
+
+
+    }
+
+   
+    //Images Continuing training and Initial Training for Homepage
+    if( $entity->bundle() == 'block_training' ){
+        $link_training = $entity->get("field_link")->getValue()[0]['uri'];
+        $visualId = $entity->get("field_visual")->getValue()[0]['target_id'];
+        $media = \Drupal::entityTypeManager()->getStorage('media')->load($visualId);
+        $fid = $media->get('image')->getValue()[0]['target_id'];
+        $file = \Drupal::entityTypeManager()->getStorage('file')->load($fid);
+        $style = \Drupal::entityTypeManager()->getStorage('image_style')->load('training_block');
+        $url_image = $file->getFileUri();
+        $url_image_final = $style->buildUrl($url_image);
+        $build['field_visual']['0'] = array("#markup" => '<a href="'.$link_training.'"><img src="'.$url_image_final.'"></a>');
+        $name_training = $entity->get('field_front_title')->getValue()[0]['value'];
+        $build['field_front_title'][0] = array("#markup" => '<a href="'.$link_training.'">' . $name_training . '</a>');
+
+    }
+
+    //Change the field author in attestation
+    if ($entity->bundle() == ('attestation')){
+        $author_attestation = $entity->get("field_author")->getValue()[0]["value"];     
+        $created_attestation_timestamp = $entity->getCreatedTime();
+        $created_attestation = Date('d F Y',$created_attestation_timestamp);
+        $build['field_author']['0'] = array("#markup" => $author_attestation.', posté le '.$created_attestation);
+    }
+
+    //get the link of the specifics contents
+    if ($entity->bundle() == ('specific_content')){
+
+
+
+        $uri_block = $entity->get('field_link')->getValue()[0]['uri'];
+        $title_specifig = $entity->get('field_front_title')->getValue()[0]['value'];
+        $descriptive_specifig = $entity->get('field_short_descriptive')->getValue()[0]['value'];
+
+        $visualId = $entity->get("field_visual")->getValue()[0]['target_id'];
+        $media = \Drupal::entityTypeManager()->getStorage('media')->load($visualId);
+        $fid = $media->get('image')->getValue()[0]['target_id'];
+        $file = \Drupal::entityTypeManager()->getStorage('file')->load($fid);
+        $style = \Drupal::entityTypeManager()->getStorage('image_style')->load('image_subpages');
+        $url_image = $file->getFileUri();
+        $url_image_final = $style->buildUrl($url_image);
+
+
+        $build['field_front_title'][0] = array("#markup" => '<a href="'.$uri_block. '" target="_blank">' . $title_specifig . '</a>');
+        $build['field_short_descriptive'][0] = array("#markup" => '<a href="'.$uri_block. '" target="_blank">' . $descriptive_specifig . '</a>');
+        $build['field_visual']['0'] = array("#markup" => '<a href="'.$uri_block. '" target="_blank"><img src="'.$url_image_final.'"></a>');
+
+
+//        $build['field_']
+
+
+
+    }
+}
+
+

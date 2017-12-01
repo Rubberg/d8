@@ -1,0 +1,77 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Archivé
+      weight: -7
+      published: false
+      default_revision: true
+    draft:
+      label: Brouillon
+      published: false
+      default_revision: false
+      weight: -10
+    need_review:
+      published: false
+      default_revision: false
+      label: 'Demande de publication'
+      weight: -9
+    published:
+      label: Publié
+      published: true
+      default_revision: true
+      weight: -8
+  transitions:
+    archive:
+      label: Archiver
+      from:
+        - published
+      to: archived
+      weight: -6
+    archived_draft:
+      label: 'Restaurer le brouillon'
+      from:
+        - archived
+      to: draft
+      weight: -5
+    archived_published:
+      label: Restaurer
+      from:
+        - archived
+      to: published
+      weight: -4
+    create_new_draft:
+      label: 'Créer un nouveau brouillon'
+      to: draft
+      weight: -10
+      from:
+        - draft
+        - published
+    publish:
+      label: Publier
+      to: published
+      weight: -7
+      from:
+        - draft
+        - need_review
+        - published
+    request_for_correction:
+      label: 'Demande de correction'
+      from:
+        - need_review
+      to: draft
+      weight: -8
+    request_for_publication:
+      label: 'Demande de publication'
+      from:
+        - draft
+      to: need_review
+      weight: -9
+  entity_types: {  }

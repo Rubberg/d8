@@ -1,0 +1,28 @@
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: content_node_taxo
+label: 'Content node & taxo'
+description: ''
+attributes: {  }
+matchers:
+  34884f36-4887-4fdc-9543-50aca1c9a4e1:
+    uuid: 34884f36-4887-4fdc-9543-50aca1c9a4e1
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: 'Content node'
+      bundles: {  }
+      group_by_bundle: true
+      include_unpublished: false
+  6d129671-1c45-447f-a4b1-0210bc8545cb:
+    uuid: 6d129671-1c45-447f-a4b1-0210bc8545cb
+    id: 'entity:taxonomy_term'
+    weight: 0
+    settings:
+      result_description: Taxonomy
+      bundles: {  }
+      group_by_bundle: true

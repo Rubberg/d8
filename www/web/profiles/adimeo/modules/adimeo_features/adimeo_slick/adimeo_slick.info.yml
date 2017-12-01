@@ -1,0 +1,10 @@
+name: 'Adimeo slick'
+description: 'slick modules'
+type: module
+core: 8.x
+dependencies:
+ - slick
+ - slick_views
+ - slick_media
+version: 8.4.0
+package: Adimeo

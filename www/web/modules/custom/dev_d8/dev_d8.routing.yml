@@ -1,0 +1,17 @@
+
+dev_d8.formation_controller_listeArticle:
+  path: '/liste-articles'
+  defaults:
+    _controller: '\Drupal\dev_d8\Controller\FormationController::listeArticle'
+    _title: 'Liste article'
+  requirements:
+    _permission: 'access content'
+
+dev_d8.article_filter_form:
+  path: '/dev_d8/form/article_filter'
+  defaults:
+    _form: '\Drupal\dev_d8\Form\ArticleFilterForm'
+    _title: 'ArticleFilterForm'
+  requirements:
+    _access: 'TRUE'
+  

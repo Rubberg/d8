@@ -1,0 +1,9 @@
+services:
+  adimeo.form_helper:
+    class: '\Drupal\adimeo\Form\FormHelper'
+    arguments:
+      - '@element_info'
+  adimeo.config_bit:
+    class: '\Drupal\adimeo\Config\ConfigBit'
+    arguments:
+      - '@element_info'

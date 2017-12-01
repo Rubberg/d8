@@ -1,0 +1,5 @@
+name: ckeditor_plugins
+type: module
+description: Ckeditor plugins
+core: 8.x
+package: uia

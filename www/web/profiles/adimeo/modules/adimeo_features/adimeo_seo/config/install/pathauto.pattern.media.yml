@@ -1,0 +1,14 @@
+uuid: 9e212160-f381-461c-91b9-914adf480d65
+langcode: fr
+status: true
+dependencies:
+  module:
+    - media_entity
+id: media
+label: Media
+type: 'canonical_entities:media'
+pattern: 'media/[media:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

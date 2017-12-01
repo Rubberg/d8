@@ -1,0 +1,320 @@
+{
+  "name": "adimeo/distrib_d8",
+  "description": "Project template for d8 distribution.",
+  "type": "project",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Adimeo",
+      "email": "abdejih@adimeo.com",
+      "homepage": "https://github.com/Core-Techs-Git/distrib_d8",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "email": "abedjih@adimeo.com"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type"    : "package",
+      "package" : {
+          "name"    : "enyo/dropzone",
+          "version" : "dev-master",
+          "type"    : "drupal-library",
+          "source"  : {
+              "url"       : "https://github.com/enyo/dropzone.git",
+              "type"      : "git",
+              "reference" : "origin/master"
+          }
+       }
+    },
+    {
+      "type"    : "package",
+      "package" : {
+          "name"    : "kenwheeler/slick",
+          "version" : "dev-master",
+          "type"    : "drupal-library",
+          "source"  : {
+              "url"       : "https://github.com/kenwheeler/slick.git",
+              "type"      : "git",
+              "reference" : "origin/master"
+          }
+       }
+    },
+    {
+      "type"    : "package",
+      "package" : {
+          "name"    : "vardot/ace",
+          "version" : "dev-master",
+          "type"    : "drupal-library",
+          "source"  : {
+              "url"       : "https://github.com/vardot/ace.git",
+              "type"      : "git",
+              "reference" : "origin/master"
+          }
+       }
+    },
+    {
+      "type"    : "package",
+      "package" : {
+          "name"    : "dinbror/blazy",
+          "version" : "dev-master",
+          "type"    : "drupal-library",
+          "source"  : {
+              "url"       : "https://github.com/dinbror/blazy.git",
+              "type"      : "git",
+              "reference" : "origin/master"
+          }
+       }
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "^1.2",
+    "cweagans/composer-patches": "^1.6",
+    "drupal-composer/drupal-scaffold": "^2.2",
+    "drupal/console": "^1.0.1",
+    "drupal/core": "~8.4",
+    "drush/drush": "^9",
+    "webflo/drupal-finder": "^1.0.0",
+    "webmozart/path-util": "^2.3",
+    "drupal/extlink": "1.0",
+    "drupal/entity_clone": "1.0-alpha1",
+    "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
+    "drupal/google_analytics_reports": "3.0-beta1",
+    "drupal/config_update": "1.4",
+    "drupal/config_filter": "1.0",
+    "drupal/config_ignore": "2.0",
+    "drupal/ctools": "3.0",
+    "drupal/token": "1.0",
+    "drupal/page_manager": "4.0-beta2",
+    "drupal/panels": "4.2",
+    "drupal/panelizer": "4.0",
+    "drupal/ds": "^3.1",
+    "drupal/field_group": "1.0-rc6",
+    "drupal/smart_trim": "1.0",
+    "drupal/advanced_text_formatter": "1.0-beta3",
+    "drupal/block_class": "1.0-alpha1",
+    "drupal/menu_block": "1.4",
+    "drupal/linkit": "4.3",
+    "drupal/features": "3.5",
+    "drupal/views_infinite_scroll": "1.5",
+    "drupal/embed": "1.0",
+    "drupal/entity": "1.0-beta1",
+    "drupal/entity_browser": "1.3",
+    "drupal/dropzonejs": "1.0-alpha7",
+    "drupal/entity_embed": "1.0-beta2",
+    "drupal/inline_entity_form": "1.0-beta1",
+    "drupal/media_entity": "1.6",
+    "drupal/media_entity_document": "1.1",
+    "drupal/media_entity_image": "1.2",
+    "drupal/video_embed_field": "1.5",
+    "drupal/crop": "1.2",
+    "drupal/focal_point": "1.0-beta4",
+    "drupal/ckeditor_bidi": "2.0",
+    "drupal/ace_editor": "1.0",
+    "drupal/entityqueue_form_widget": "1.0-beta1",
+    "drupal/imagemagick": "2.1",
+    "drupal/imageapi_optimize": "2.0-alpha3",
+    "drupal/ultimate_cron": "2.0-alpha2",
+    "drupal/persistent_login": "1.0-alpha3",
+    "drupal/userprotect": "1.0",
+    "drupal/config_perms": "1.0",
+    "drupal/roleassign": "1.0-alpha2",
+    "drupal/admin_toolbar": "1.20",
+    "drupal/pathauto": "1.0",
+    "drupal/redirect": "1.0-beta1",
+    "drupal/metatag": "1.2",
+    "drupal/schema_metatag": "1.0-rc4",
+    "drupal/simple_sitemap": "2.9",
+    "drupal/google_analytics": "2.2",
+    "drupal/yoast_seo": "1.3",
+    "drupal/l10n_client": "1.0-alpha1",
+    "drupal/coffee": "1.0-beta2",
+    "drupal/responsive_preview": "1.0-alpha7",
+    "drupal/views_bulk_edit": "2.0-alpha1",
+    "drupal/revision_log_default": "1.0",
+    "drupal/webform": "^5.0@beta",
+    "drupal/content_lock": "1.0-alpha4",
+    "drupal/rabbit_hole": "1.0-beta3",
+    "drupal/fast_404": "1.0-alpha2",
+    "drupal/diff": "1.0-rc1",
+    "drupal/masquerade": "2.0-beta1",
+    "drupal/menu_admin_per_menu": "1.0",
+    "drupal/drd_agent": "3.4",
+    "drupal/libraries_ui": "1.0",
+    "drupal/devel": "^1.2",
+    "drupal/bootstrap": "^3.6",
+    "drupal/blazy": "1.0-rc2",
+    "drupal/slick": "1.0",
+    "drupal/slick_views": "1.0-rc2",
+    "drupal/slick_media": "1.0",
+    "drupal/username_enumeration_prevention": "1.0-beta1",
+    "drupal/password_policy": "3.0-alpha4",
+    "drupal/seckit": "1.0-alpha2",
+    "drupal/honeypot": "1.27",
+    "drupal/shield": "1.1",
+    "drupal/captcha": "1.0-beta1",
+    "drupal/recaptcha": "2.2",
+    "drupal/search_api": "1.4",
+    "drupal/mailsystem": "4.1",
+    "drupal/smtp": "1.0-beta3",
+    "drupal/maxlength": "1.0-beta1",
+    "drupal/taxonomy_access_fix": "2.1",
+    "drupal/better_exposed_filters": "3.0-alpha3",
+    "drupal/autocomplete_deluxe": "1.0-beta1",
+    "drupal/link_attributes": "1.1",
+    "drupal/paragraphs": "^1.2",
+    "drupal/paragraphs_previewer": "1.0",
+    "drupal/color_field": "2.0-rc2",
+    "drupal/entity_reference_revisions": "1.3",
+    "drupal/viewsreference": "1.0",
+    "drupal/layout_plugin": "1.0-alpha23",
+    "drupal/xmlsitemap": "1.0-alpha2",
+    "drupal/masonry": "1.0-rc2",
+    "drupal/charts": "3.0-alpha6",
+    "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
+    "drupal/ckeditor_media_embed": "1.1",
+    "drupal/total_control": "2.0-alpha3",
+    "drupal/anchor_link": "1.5",
+    "drupal/entity_browser_enhanced": "1.0-beta5",
+    "drupal/vmi": "1.0-beta3",
+    "drupal/media_entity_video": "^1.0@beta",
+    "enyo/dropzone": "dev-master",
+    "kenwheeler/slick": "dev-master",
+    "vardot/ace": "dev-master",
+    "dinbror/blazy": "dev-master",
+    "drupal/mail_edit": "1.x-dev",
+    "drupal/security_review": "1.x-dev",
+    "drupal/varbase_bootstrap_paragraphs": "4.0-beta1",
+    "drupal/varbase_editor": "4.18",
+    "drupal/varbase_heroslider_media": "4.0-beta12",
+    "drupal/varbase_carousels": "4.0-beta3",
+    "drupal/varbase_total_control": "1.0-beta8",
+    "mkalkbrenner/php-htmldiff-advanced": "~0.0.8",
+    "drupal/views_bulk_operations": "^1.0@alpha",
+    "drupal/responsive_image_automatic": "^1.0@RC",
+    "drupal/social_media": "^1.2",
+    "drupal/content_moderation_notifications": "^3.0@alpha",
+    "drupal/message_notify": "^1.0@beta",
+    "drupal/migrate_ui": "^1.1",
+    "drupal/kint": "^1.2",
+    "drupal/dynamic_entity_reference": "^1.4",
+    "drupal/colorbox": "^1.4" 
+    
+  },
+ "require-dev": {
+    "drupal/drupal-extension": "^3.2",
+    "jakoch/phantomjs-installer": "1.9.8",
+    "behat/behat": "^3.0",
+    "drupal/coder": "8.*",
+    "phing/phing": "^2.14",
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "behat/mink-zombie-driver": "@stable",
+    "behat/mink-selenium2-driver":  "~1.3",
+    "mikey179/vfsStream": "~1.2",
+    "phpunit/phpunit": "~4.8",
+    "guzzlehttp/guzzle": "6.2.*@stable",
+    "symfony/css-selector": "~2.8",
+    "squizlabs/php_codesniffer": "2.*",
+    "behatch/contexts": "*",
+    "emuse/behat-html-formatter": "@stable"
+  }, 
+  "config": {
+    "bin-dir": "bin/",
+    "secure-http": false,
+    "optimize-autoloader": true
+  },
+  "autoload": {
+    "psr-4": {
+      "Adimeo\\composer\\": "scripts/composer"
+    }
+  },
+  "scripts": {
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "post-install-cmd": [
+      "Adimeo\\composer\\ScriptHandler::createRequiredFiles",
+      "Adimeo\\composer\\ScriptHandler::removeGitDirectories",
+      "@composer drupal-scaffold"
+    ],
+    "post-drupal-scaffold-cmd": ["Adimeo\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-8.x-4.x": "8.4.x-dev"
+    },
+    "installer-paths": {
+      "web/core": ["drupal/core"],
+      "web/profiles/{$name}": ["type:drupal-profile"],
+      "web/modules/contrib/{$name}": ["type:drupal-module"],
+      "web/themes/contrib/{$name}": ["type:drupal-theme"],
+      "web/libraries/{$name}": ["type:drupal-library"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
+    },
+    "enable-patching": true,
+    "patches": {
+      "drupal/page_manager": {
+        "Issue #2624972: No configuration possible in UI for 301, 303, etc. HTTP responses":
+        "https://www.drupal.org/files/issues/page_manager-redirect_location-2624972-30.patch"
+      },
+      "drupal/coffee": {
+        "Issue #2815381: Coffee breaks whole page when using right to left (rtl) languages in drupal 8":
+        "https://www.drupal.org/files/issues/coffee-coffee_breaks_page_with_rtl-2815381-6.patch",
+        "Issue #2872093: Coffee css fixes in RTL":
+        "https://www.drupal.org/files/issues/2872093-10.patch"
+      },
+      "drupal/entityqueue": {
+        "Issue #2145441: Option to create Entityqueue tab on Entity pages.":
+        "https://www.drupal.org/files/issues/entityqueue-add_entityqueue_tab-2145441-22.patch"
+      },
+      "drupal/yoast_seo": {
+        "Issue #2877613: Add [ Text (plain, long) ] filed type [string_log] for yoast seo to use.":
+        "https://www.drupal.org/files/issues/2877613-2_0.patch"
+      },
+      "drupal/paragraphs": {
+        "Issue #2461695: Support translatable paragraph entity reference revision field":
+        "https://www.drupal.org/files/issues/meta_support-2461695-222.patch",
+        "Issue #2868155: Add new hooks to allow easier editing of paragraph forms":
+        "https://www.drupal.org/files/issues/2868155-16.patch",
+        "Issue #2877927: Show add widget between paragraphs on hover":
+        "https://www.drupal.org/files/issues/2877927_29.patch"
+      },
+      "drupal/ckeditor_media_embed": {
+        "Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG":
+        "https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch"
+      },
+      "drupal/config_perms": {
+        "Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist":
+        "https://www.drupal.org/files/issues/config_perms-added_missing_edit_route-2877329-11.patch"
+      },
+      "drupal/username_enumeration_prevention": {
+        "Issue #2823440: Set $severity to OK at start of hook_requirements()":
+        "https://www.drupal.org/files/issues/username_enumeration_prevention_requirements_severity-2823440-1.patch"
+      },
+      "drupal/paragraphs_previewer": {
+        "Issue #2904917: Make paragraph previewer work with new UI/UX improvement patch":
+        "https://www.drupal.org/files/issues/2904917-2.patch"
+      },
+      "drupal/entity_clone": {
+        "Issue #2770687: Wrong redirection of page for entity clone module":
+        "https://www.drupal.org/files/issues/2770687_wrong_redirection_for_entity_9.patch",
+        "Issue #2800203: Event dispatcher for clone events":
+        "https://www.drupal.org/files/issues/entity_clone-event_dispatcher-2800203-5.patch",
+        "Issue #2706639: Support for cloning nodes that have another entities attached":
+        "https://www.drupal.org/files/issues/entity_clone-attached_entities-2706639-25.patch",
+        "Issue #2769823: Getting error after clicking on abort clone button":
+        "https://www.drupal.org/files/issues/entity_clone-abort_clone_causes_fatal_error-2769823-4.patch"
+      }
+    }
+  }
+}

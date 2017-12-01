@@ -1,0 +1,16 @@
+bundle: adimeo
+excluded:
+  - core.entity_view_mode.media.small
+  - core.entity_view_mode.media.large
+  - core.entity_view_mode.media.medium
+  - image.style.d12
+  - image.style.d3
+  - image.style.d6
+  - image.style.d3_traditional
+  - core.entity_view_display.media.image.large
+  - core.entity_view_display.media.image.medium
+  - core.entity_view_display.media.image.small
+  - responsive_image.styles.d12
+  - responsive_image.styles.d6
+  - responsive_image.styles.default
+required: true

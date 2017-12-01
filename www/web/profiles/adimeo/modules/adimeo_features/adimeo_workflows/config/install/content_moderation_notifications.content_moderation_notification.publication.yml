@@ -1,0 +1,15 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: publication
+workflow: editorial
+transitions:
+  publish: publish
+roles: {  }
+author: true
+emails: ''
+subject: '[site:name] - Contenu publié'
+body:
+  value: "Bonjour,\r\n\r\nLe contenu <a href=\"[site:url]node/[node:nid]\" >[node:title] </a> est publié sur le site de <a href=\"[site:url]\">[site:name]</a>\r\n\r\n[node:log]\r\n\r\nCordialement,"
+  format: restricted_html
+label: Publication

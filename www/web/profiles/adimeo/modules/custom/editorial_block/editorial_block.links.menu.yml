@@ -1,0 +1,18 @@
+
+# Editorial block menu items definition
+entity.editorial_block_entity.collection:
+  title: 'Editorial block list'
+  route_name: entity.editorial_block_entity.collection
+  description: 'List Editorial block entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Editorial block type menu items definition
+entity.editorial_block_entity_type.collection:
+  title: 'Editorial block type'
+  route_name: entity.editorial_block_entity_type.collection
+  description: 'List Editorial block type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

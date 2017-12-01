@@ -1,0 +1,33 @@
+add editorial block entities:
+  title: 'Create new Editorial block entities'
+
+administer editorial block entities:
+  title: 'Administer Editorial block entities'
+  description: 'Allow to access the administration form to configure Editorial block entities.'
+  restrict access: true
+
+delete editorial block entities:
+  title: 'Delete Editorial block entities'
+
+edit editorial block entities:
+  title: 'Edit Editorial block entities'
+
+access editorial block overview:
+  title: 'Access the Editorial block overview page'
+
+view published editorial block entities:
+  title: 'View published Editorial block entities'
+
+view unpublished editorial block entities:
+  title: 'View unpublished Editorial block entities'
+
+view all editorial block revisions:
+  title: 'View all Editorial block revisions'
+
+revert all editorial block revisions:
+  title: 'Revert all Editorial block revisions'
+  description: 'Role requires permission <em>view Editorial block revisions</em> and <em>edit rights</em> for editorial block entities in question or <em>administer editorial block entities</em>.'
+
+delete all editorial block revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Editorial block revisions</em> and <em>delete rights</em> for editorial block entities in question or <em>administer editorial block entities</em>.'

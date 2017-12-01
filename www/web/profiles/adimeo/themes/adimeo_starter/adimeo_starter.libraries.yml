@@ -1,0 +1,21 @@
+global-styling:
+  version: 1.x
+  css:
+    base:
+      css/normalize.css: {}
+      css/font.css: {}
+    layout:
+      css/base_layout.css: {}
+    component:
+      css/components.css: {}
+    theme:
+      css/global.css: {}
+      css/mobile.css: {}
+      css/print.css: { media: print }
+  js:
+    js/modernizr.custom.js: {}
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings

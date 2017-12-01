@@ -1,0 +1,4 @@
+adimeo_core.settings_index:
+  title: 'Adimeo settings'
+  route_name: adimeo_core.settings
+  base_route: adimeo_core.settings

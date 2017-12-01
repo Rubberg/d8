@@ -1,0 +1,16 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: demande_de_publication
+workflow: editorial
+transitions:
+  request_for_publication: request_for_publication
+roles:
+  administrator: administrator
+author: false
+emails: ''
+subject: 'Demande de publication'
+body:
+  value: "Bonjour,\r\n\r\nDemande de publication par [current-user:display-name] concernant le contenu <a href=\"[site:url]node/[node:nid]\" >[node:title] </a> sur le site de <a href=\"[site:url]\">[site:name]</a>\r\n\r\n[node:log]"
+  format: restricted_html
+label: 'Demande de publication'

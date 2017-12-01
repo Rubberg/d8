@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains ckeditor_plugins.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ckeditor_plugins_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ckeditor_plugins module.
+    case 'help.page.ckeditor_plugins':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Ckeditor plugins') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ckeditor_plugins_theme() {
+  $theme = [];
+
+  return $theme;
+}
+
+
+function ckeditor_plugins_ckeditor_css_alter(array &$css,\Drupal\editor\Entity\Editor $editor) {
+    $css[] = 'modules/custom/ckeditor_plugins/css/bo_style.css';
+}

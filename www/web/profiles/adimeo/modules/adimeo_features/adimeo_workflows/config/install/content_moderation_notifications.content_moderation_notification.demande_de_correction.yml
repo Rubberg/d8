@@ -1,0 +1,15 @@
+langcode: fr
+status: true
+dependencies: {  }
+id: demande_de_correction
+workflow: editorial
+transitions:
+  request_for_correction: request_for_correction
+roles: {  }
+author: true
+emails: ''
+subject: 'Demande de correction'
+body:
+  value: "Bonjour,\r\n\r\nDemande de correction par [current-user:display-name] concernant le contenu <a href=\"[site:url]node/[node:nid]\" >[node:title] </a> sur le site de <a href=\"[site:url]\">[site:name]</a>\r\n\r\n<h4>Détail des corrections à effectuer : </h4>\r\n\r\n[node:log]\r\n\r\nCordialement,\r\n"
+  format: restricted_html
+label: 'Demande de correction'
